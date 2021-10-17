@@ -174,8 +174,8 @@ const getSort = function(sorters, attr) {
 };
 
 // aggregator templates default to US number formatting but this is overrideable
-const usFmt = numberFormat();
-const usFmtInt = numberFormat({digitsAfterDecimal: 0});
+const usFmt = numberFormat({thousandsSep:' '});
+const usFmtInt = numberFormat({digitsAfterDecimal: 0,thousandsSep:' '});
 const usFmtPct = numberFormat({
   digitsAfterDecimal: 1,
   scaler: 100,
@@ -457,13 +457,13 @@ const locales = {
       renderError: 'An error occurred rendering the PivotTable results.',
       computeError: 'An error occurred computing the PivotTable results.',
       uiRenderError: 'An error occurred rendering the PivotTable UI.',
-      selectAll: 'Select All',
-      selectNone: 'Select None',
+      selectAll: 'Mindet kiválaszt',
+      selectNone: 'Egyiket sem',
       tooMany: '(too many to list)',
       filterResults: 'Filter values',
-      apply: 'Apply',
-      cancel: 'Cancel',
-      totals: 'Totals',
+      apply: 'Alkalmaz',
+      cancel: 'Mégsem',
+      totals: 'Összesen',
       vs: 'vs',
       by: 'by',
     },
@@ -474,18 +474,18 @@ const locales = {
 const mthNamesEn = [
   'Jan',
   'Feb',
-  'Mar',
-  'Apr',
-  'May',
-  'Jun',
-  'Jul',
+  'Márc',
+  'Ápr',
+  'Máj',
+  'Jún',
+  'Júl',
   'Aug',
-  'Sep',
-  'Oct',
+  'Szept',
+  'Okt',
   'Nov',
   'Dec',
 ];
-const dayNamesEn = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const dayNamesEn = ['V', 'H', 'K', 'Sz', 'Cs', 'P', 'Sz'];
 const zeroPad = number => `0${number}`.substr(-2, 2); // eslint-disable-line no-magic-numbers
 
 const derivers = {
