@@ -1,3 +1,7 @@
+# react-pivottable-grouping-hu
+
+This is a fork of [react-react-pivottable-grouping] with hungarian language.
+
 # react-pivottable-grouping
 
 This is a fork of [react-pivottable](https://react-pivottable.js.org/) with added capacity of grouping and displaying subtotals.
